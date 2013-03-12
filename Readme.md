@@ -10,3 +10,5 @@ take home.html file, put it in your home folder, change homepage, enjoy.
 todo:
 make a file for the user (.json or something) where he can put the data (groups
 and links), so that the script can load those
+move the search in the middle of the groups in terms of pixels
+clean up css
