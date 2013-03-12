@@ -15,7 +15,7 @@ html
         outline: 0
 
       #search
-        margin: 27px auto auto 140px
+        margin: 55px auto auto 140px
         position: relative
         z-index: 2
         clear: both
@@ -30,7 +30,7 @@ html
         clear: both
         .group
           width: 225px
-          margin: 55px 0 0 55px
+          margin: 35px 0 0 55px
           position: relative
           float: left
           .name
@@ -75,9 +75,16 @@ html
               padding: 0
             li:hover
               background: #232323
+    javascript:
+      window.onload = function() {
+        var ddg = document.createElement('iframe');
+        ddg.setAttribute("src", "http://duckduckgo.com/search.html?width=340&prefill=Search&bgcolor=1d1d1d&focus=yes");
+        ddg.setAttribute("style", "overflow:hidden;margin:0;padding:0;width:400px;height:40px;");
+        ddg.setAttribute("frameborder", "0");
+        document.getElementById("search").appendChild(ddg);
+      };
   body
     #search
-      iframe src="http://duckduckgo.com/search.html?width=340&prefill=Search&bgcolor=1d1d1d&focus=yes" style="overflow:hidden;margin:0;padding:0;width:400px;height:40px;" frameborder="0"
     .container
       - for group in groups do
         .group

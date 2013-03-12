@@ -46,14 +46,10 @@ g << Link.new("Facebook", "http://facebook.com")
 g << Link.new("Youtube", "http://youtube.com")
 groups << g
 
-# Make .slim file
+# Make home.html file
 s = Scope.new(title, groups)
-f = File.open('./temp.slim', 'w')
+f = File.open('./home.html', 'w')
 t = Slim::Template.new('./template.slim')
 f.write(t.render(s))
 f.close
-
-# Make .html file
-`slimrb ./temp.slim > ./home.html`
-`rm -f ./temp.slim`
 
